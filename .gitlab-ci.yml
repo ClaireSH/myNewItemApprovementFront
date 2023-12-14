@@ -1,0 +1,48 @@
+variables:
+  # CLI_VERSION: 8.3.19
+  CI: "false"
+
+stages:
+  # - build
+  # - test
+  - deploy
+
+.deploy:
+  script:
+    - export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
+    - export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
+    - export AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION
+    - export NODE_OPTIONS=--openssl-legacy-provider
+
+    - yarn install --frozen-lockfile
+    - sh .bin/amplify-headless-init.sh ${AppEnv}
+    - amplify env checkout ${AppEnv}
+    - amplify remove codegen
+    - amplify add codegen --apiId ${AppSyncApiId}
+    - amplify publish --yes --no-gql-override
+
+deploy-dev:
+  extends: .deploy
+  stage: deploy
+  tags:
+    - fargate-ci
+  variables:
+    AppEnv: dev
+    AppSyncApiId: k2j5o5htqjcdpfa4immeomwsbq
+  environment:
+    name: develop
+  only:
+    - develop
+
+deploy-staging:
+  extends: .deploy
+  stage: deploy
+  tags:
+    - fargate-ci
+  variables:
+    AppEnv: staging
+    AppSyncApiId: fu2viz22frh5tbgojga54dyoti
+  environment:
+    name: staging
+  only:
+    - staging

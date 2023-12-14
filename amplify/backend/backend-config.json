@@ -1,0 +1,132 @@
+{
+  "api": {},
+  "auth": {
+    "mr12nitemapprovement4782b6b3": {
+      "customAuth": false,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "serviceType": "imported"
+    }
+  },
+  "hosting": {
+    "amplifyhosting": {
+      "providerPlugin": "awscloudformation",
+      "service": "amplifyhosting",
+      "type": "manual"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_auth_mr12nitemapprovement4782b6b3_allowUnauthenticatedIdentities": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "mr12nitemapprovement4782b6b3"
+        }
+      ]
+    },
+    "AMPLIFY_auth_mr12nitemapprovement4782b6b3_authRoleArn": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "mr12nitemapprovement4782b6b3"
+        }
+      ]
+    },
+    "AMPLIFY_auth_mr12nitemapprovement4782b6b3_authRoleName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "mr12nitemapprovement4782b6b3"
+        }
+      ]
+    },
+    "AMPLIFY_auth_mr12nitemapprovement4782b6b3_identityPoolId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "mr12nitemapprovement4782b6b3"
+        }
+      ]
+    },
+    "AMPLIFY_auth_mr12nitemapprovement4782b6b3_identityPoolName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "mr12nitemapprovement4782b6b3"
+        }
+      ]
+    },
+    "AMPLIFY_auth_mr12nitemapprovement4782b6b3_nativeClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "mr12nitemapprovement4782b6b3"
+        }
+      ]
+    },
+    "AMPLIFY_auth_mr12nitemapprovement4782b6b3_unauthRoleArn": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "mr12nitemapprovement4782b6b3"
+        }
+      ]
+    },
+    "AMPLIFY_auth_mr12nitemapprovement4782b6b3_unauthRoleName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "mr12nitemapprovement4782b6b3"
+        }
+      ]
+    },
+    "AMPLIFY_auth_mr12nitemapprovement4782b6b3_userPoolId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "mr12nitemapprovement4782b6b3"
+        }
+      ]
+    },
+    "AMPLIFY_auth_mr12nitemapprovement4782b6b3_userPoolName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "mr12nitemapprovement4782b6b3"
+        }
+      ]
+    },
+    "AMPLIFY_auth_mr12nitemapprovement4782b6b3_webClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "mr12nitemapprovement4782b6b3"
+        }
+      ]
+    },
+    "AMPLIFY_hosting_amplifyhosting_appId": {
+      "usedBy": [
+        {
+          "category": "hosting",
+          "resourceName": "amplifyhosting"
+        }
+      ]
+    },
+    "AMPLIFY_hosting_amplifyhosting_type": {
+      "usedBy": [
+        {
+          "category": "hosting",
+          "resourceName": "amplifyhosting"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "mr12nItemApprovementStorage": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "S3"
+    }
+  }
+}

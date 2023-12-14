@@ -1,0 +1,16 @@
+{
+  "authSelections": "identityPoolAndUserPool",
+  "resourceName": "mr12nitemapprovement4782b6b3",
+  "serviceType": "imported",
+  "region": "ap-northeast-1",
+  "requiredAttributes": [
+    "email"
+  ],
+  "passwordPolicyMinLength": 8,
+  "passwordPolicyCharacters": [],
+  "mfaConfiguration": "OFF",
+  "autoVerifiedAttributes": [
+    "email"
+  ],
+  "mfaTypes": []
+}
